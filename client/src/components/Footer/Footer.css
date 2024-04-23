@@ -1,0 +1,21 @@
+.footer>img {
+    width: 45%;
+    float: right;
+    padding: 10px;
+}
+
+.footer-container {
+    height: 50px;
+    background-color: #DCBFFF;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-container>h3 {
+    font-size: 20px;
+    color: #481a70;
+}

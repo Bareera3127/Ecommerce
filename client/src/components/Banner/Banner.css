@@ -1,0 +1,9 @@
+.banner-container {
+    height: 400px;
+    margin: 15px;
+    background-color: #E5D4FF;
+    box-shadow: 2px 2px 2px 2px #D0A2F7;
+}
+.banner-container > img {
+   height: 400px;
+}
