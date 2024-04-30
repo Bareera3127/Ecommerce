@@ -1,0 +1,16 @@
+.prdct-img {
+    width: 325px;
+    height: 400px;
+    /* color: #481a70; */
+}
+.prdct-img:hover {
+    opacity: 0.5;
+}
+.productCard {
+    color: #481a70;
+    text-align: center;
+
+}
+.productCard:hover {
+    text-decoration: none;
+}
