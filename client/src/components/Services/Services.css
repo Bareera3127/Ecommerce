@@ -1,0 +1,17 @@
+.services-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E5D4FF;
+    height: 150px;
+    margin: 25px;
+}
+
+.icons:hover {
+    background-color: #D0A2F7;
+}
+
+.services-tags {
+    font-family: 'Recursive', sans-serif;
+    background-color: #DCBFFF;
+}

@@ -18,5 +18,5 @@ const cartSchema =  new mongoose.Schema({
     ],
     
 },{timestamps:true})//automatically stores created date or updated date in the database
-const cart = mongoose.model('Cart', cartSchema)
-module.exports =  cart
+const Cart = mongoose.model('Cart', cartSchema)
+module.exports =  Cart

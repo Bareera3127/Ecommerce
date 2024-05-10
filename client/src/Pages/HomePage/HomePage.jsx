@@ -11,7 +11,7 @@ import Services from '../../components/Services/Services.jsx'
 export default function HomePage() {
   return (
     <>
-        <Navbar/>
+      
         <div className='promo'>
          <Banner/>
          

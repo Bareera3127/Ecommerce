@@ -1,0 +1,28 @@
+.productDetails-container {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+}
+
+.cart {
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px;
+    color: #481a70;
+    background-color: #E5D4FF;
+}
+
+.names {
+    margin: 25px;
+    color: #481a70;
+}
+
+.cart:hover {
+    border-radius: 25px;
+
+}
+
+.product-details-image {
+    padding: 10px;
+
+}

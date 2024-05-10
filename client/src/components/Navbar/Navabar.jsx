@@ -1,18 +1,47 @@
 import { AiOutlineShoppingCart } from "react-icons/ai"; 
-
+import './Navbar.css'
 import {Link} from 'react-router-dom'
+import { useAuthContext } from "../../context/Authcontext";
+import axios from  'axios'
 
-export default function Navbar() {
+
+const navabar = () => {
+  const {user, setUser} =  useAuthContext()
+  //logout user and clear local storage and set  auth context  user to null 
+  const LogoutUser = async() => 
+   {
+    const response = await axios.post('http://localhost:3000/api/v1/user/logout')
+    if(response.status == 200)
+      {
+      // localStoarge.removeItem('userLogged')
+      localStorage.removeItem('userLoggerd')
+      setUser(null)
+      // alert('you have been logout')
+    }
+  }
   return (
-    <div className='navbar'>
-        <ul className='ul'>
+    <nav className='navbar'>
+      <h1>Ecommerce</h1>
+      <div className="navbar-links">
+        {!user ? (
+          <>
+              <Link  className='links' to ={'/login'}>Login</Link>
+              <Link  className='links' to ={'/register'}>Register</Link>
+          </>
+        ):(
+          <>
             <Link className='links' to ={'/'}>Home</Link >
-            <Link  className='links' to ={'/Login'}>Login</Link>
-            <Link  className='links' to ={'/Register'}>Register</Link>
-            <Link className='links' to={'/Cart'}><AiOutlineShoppingCart /></Link>
-            
-        </ul>
-        </div>
+            {/*style logout button */}
+            <button onClick={LogoutUser}>Logout</button>
+          </>
+        )}
+        <Link className="link" to={'/cart'}><AiOutlineShoppingCart style={{"fontSize":"30px"}} /></Link>
+      </div>    
+    </nav>
   )
 }
+export default navabar
+
+
+
 

@@ -9,8 +9,15 @@ const userSchema = new  mongoose.Schema({
     },
     password:{
         type:String
-    }
+    },
+    //reference to the model
+    cart: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'Product'
+        }
+    ]
 
-})
+});
 const user = mongoose.model('User',userSchema)
 module.exports =  user
